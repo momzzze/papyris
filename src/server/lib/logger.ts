@@ -28,3 +28,7 @@ export const logger = pino({
         },
       },
 });
+
+export function withContext(context: LogContext) {
+  return logger.child(context);
+}
